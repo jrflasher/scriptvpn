@@ -1,0 +1,27 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/path/to/ssl/cert.pem",
+              "keyFile": "/path/to/ssl/key.pem"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [{"protocol": "freedom"}]
+}
